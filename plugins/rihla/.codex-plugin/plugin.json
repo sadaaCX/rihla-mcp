@@ -1,0 +1,21 @@
+{
+  "name": "rihla",
+  "version": "0.1.0",
+  "description": "Connect securely to Rihla through Sadaa's MCP service.",
+  "author": {
+    "name": "Sadaa"
+  },
+  "repository": "https://github.com/sadaacx/rihla-mcp",
+  "interface": {
+    "displayName": "Rihla",
+    "shortDescription": "Use Rihla in Codex.",
+    "longDescription": "Connect to Rihla using your own OAuth account.",
+    "developerName": "Sadaa",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": ["Show me the available Rihla tools."],
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png"
+  },
+  "mcpServers": "./.mcp.json"
+}
