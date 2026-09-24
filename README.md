@@ -55,13 +55,3 @@ The marketplace name is `sadaacx`; the package name is `rihla-plugin`; its MCP s
 ## Claude Desktop, Cowork and ChatGPT
 
 See the [MCP connection guide](docs/mcp-guide.md) for direct-connector setup, the difference between a connector and the skill bundle, and public-directory limitations.
-
-## Upgrading from the earlier package
-
-The earlier package was named `rihla` and used a development endpoint. This branch renames it to `rihla-plugin` and connects to production. Install and authenticate the new package, then disable or uninstall the old `rihla` package to avoid duplicate tool connections. A previous local `sadaa-cx` development bundle is also a separate installation; disable it if using this package instead. Existing installations are not automatically renamed or migrated by this branch.
-
-## Maintainers
-
-The shared package is `plugins/rihla-plugin/`, with Claude and Codex manifests and five self-contained skill folders. Both manifests use version `0.2.0`. Marketplace catalogs remain under `.claude-plugin/` and `.agents/plugins/`.
-
-Do not publish customer reports, local test outputs, credentials or personal configuration. Synthetic examples are included only to explain evidence checks. See [validation and release checks](docs/testing.md).
