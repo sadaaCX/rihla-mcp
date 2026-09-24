@@ -20,16 +20,16 @@ Five customer-experience skills and a production MCP connection for Claude and C
 
 For visual cards, provide your **logo, brand colors and organization/branch name**. The skill asks for missing details and reuses what you already provided. A reference card supplies layout inspiration, not permission to copy its customer branding. Image rendering depends on the host's tools; this package does not bundle an image renderer.
 
-## Install this branch
+## Install
 
-This version is on `codex/cx-skills-production-guide`. The default branch is not updated by publishing this branch. Use the branch-specific instructions below to get the five skills and production endpoint.
+Install the five skills and production MCP connection from the public Sadaa marketplace.
 
 ### Claude Code
 
 1. Add the marketplace:
 
 ```text
-/plugin marketplace add https://github.com/sadaaCX/rihla-mcp.git#codex/cx-skills-production-guide
+/plugin marketplace add sadaaCX/rihla-mcp
 ```
 
 2. In a separate prompt, install Rihla:
@@ -45,13 +45,13 @@ Try `/rihla-plugin:cx-card-analysis` with an attached report and your brand asse
 ### Codex
 
 ```bash
-codex plugin marketplace add https://github.com/sadaaCX/rihla-mcp.git --ref codex/cx-skills-production-guide
+codex plugin marketplace add https://github.com/sadaaCX/rihla-mcp.git
 codex plugin add rihla-plugin@sadaacx
 ```
 
 Complete OAuth in the app. For CLI authentication, run `codex mcp list` to find the registered server name, then `codex mcp login <server-name> --scopes rihla`. Start a new task to load the installed skills and tools.
 
-The marketplace name is `sadaacx`; the package name is `rihla-plugin`; its MCP server key remains `rihla`. An already-registered marketplace may need its source/ref updated through the host's marketplace management before installing this branch.
+The marketplace name is `sadaacx`; the package name is `rihla-plugin`; its MCP server key remains `rihla`. An already-registered marketplace may need its source/ref updated through the host's marketplace management to use the default branch before installing.
 
 ## Claude Desktop, Cowork and ChatGPT
 

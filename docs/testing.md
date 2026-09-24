@@ -24,4 +24,4 @@
 
 Local development trials exercised real survey/argument schemas and assistant-authored simulated workflows. These do not establish independent model behavior, authenticated host compatibility or public-directory approval. Before release, verify fresh installation, OAuth sign-in/revocation, automatic skill discovery, Arabic image readability, preview rendering and draft flows in the intended hosts with designated test data.
 
-The feature branch changes both the package name and the endpoint. Verify that the old development connection is disabled when testing the new installation. Never use customer examples or active tokens as public test fixtures.
+Version 0.2.0 changes both the package name and the endpoint. Verify that the old development connection is disabled when testing the new installation. Never use customer examples or active tokens as public test fixtures.
