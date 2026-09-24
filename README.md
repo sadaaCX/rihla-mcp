@@ -26,20 +26,21 @@ This version is on `codex/cx-skills-production-guide`. The default branch is not
 
 ### Claude Code
 
-No manual clone is needed. Run these as separate prompts in Claude Code:
+1. Add the marketplace:
 
 ```text
 /plugin marketplace add https://github.com/sadaaCX/rihla-mcp.git#codex/cx-skills-production-guide
+```
+
+2. In a separate prompt, install Rihla:
+
+```text
 /plugin install rihla-plugin@sadaacx
 ```
 
-Claude downloads the selected branch for you. On Claude Code v2.1.275 or later, you can also add and install in one prompt:
+3. Run `/mcp` and sign in to Rihla. Reload plugins or restart if prompted.
 
-```text
-/plugin install rihla-plugin --marketplace https://github.com/sadaaCX/rihla-mcp.git#codex/cx-skills-production-guide
-```
-
-Use `/mcp` to authenticate the `rihla` server. Reload plugins or restart when prompted. Try `/rihla-plugin:cx-card-analysis` with an attached report and your brand assets.
+Try `/rihla-plugin:cx-card-analysis` with an attached report and your brand assets. Claude downloads the plugin automatically; no terminal commands or manual repository clone are needed.
 
 ### Codex
 
