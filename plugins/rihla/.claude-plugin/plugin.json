@@ -1,8 +1,0 @@
-{
-  "name": "rihla",
-  "version": "0.1.0",
-  "description": "Connect securely to Rihla through Sadaa's MCP service.",
-  "author": {"name": "Sadaa"},
-  "repository": "https://github.com/sadaacx/rihla-mcp",
-  "mcpServers": "./.mcp.json"
-}

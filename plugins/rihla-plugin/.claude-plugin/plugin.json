@@ -1,0 +1,11 @@
+{
+  "name": "rihla-plugin",
+  "version": "0.2.0",
+  "description": "Create branded CX cards, analyze feedback, and design survey and journey drafts in Rihla.",
+  "author": {
+    "name": "Sadaa"
+  },
+  "repository": "https://github.com/sadaacx/rihla-mcp",
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/"
+}

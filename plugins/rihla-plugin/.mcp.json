@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rihla": {
+      "type": "http",
+      "url": "https://mcp.sadaa.com/mcp"
+    }
+  }
+}

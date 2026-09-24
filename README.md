@@ -1,46 +1,58 @@
-<img src="plugins/rihla/assets/logo.png" alt="Rihla" width="120" />
+<img src="plugins/rihla-plugin/assets/logo.png" alt="Rihla" width="120" />
 
-# Rihla MCP
+# Rihla Plugin
 
-The Rihla plugin marketplace by Sadaa, for Claude and Codex.
+Five customer-experience skills and a production MCP connection for Claude and Codex, by Sadaa.
 
-Connects to **https://mcp-dev.sadaa.com/mcp** using Streamable HTTP and OAuth (scope `rihla`). This repository packages client configuration and branding; the MCP server runs remotely. The configured endpoint is the development environment.
+**Connection URL: `https://mcp.sadaa.com/mcp`** · Transport: Streamable HTTP · Authentication: OAuth, scope `rihla`.
 
-## Claude Cowork / Claude Desktop
+`mcp.sadaa.com` is the host; include `/mcp` when adding the connector. Each user signs in with their own account. No backend service secret or API key is needed.
 
-1. Open **Customize → Plugins → + → Add marketplace**.
-2. Choose **Add from a repository** and enter `https://github.com/sadaacx/rihla-mcp`.
-3. Install **rihla** from the **sadaacx** marketplace.
-4. Connect Rihla and complete OAuth with your own account. Enable it for your conversation if needed.
+## Skills
 
-Organization policies may require an administrator to enable the plugin or connector.
+| Skill | What you get |
+|---|---|
+| `cx-card-analysis` | A visual CX report card with supported metrics, findings and your organization's branding. |
+| `cx-action-plan` | Prioritized improvements, proposed owners, time horizons and success measures; a visual card when requested. |
+| `customer-feedback-analysis` | Comment themes, anonymized quotes, limitations and supported segment comparisons. |
+| `survey-design-review` | Concise Arabic/English survey design, review, and authorized draft creation. |
+| `journey-measurement-design` | Touchpoints, measurement plans, and authorized journey drafts. |
 
-Alternatively, add `https://mcp-dev.sadaa.com/mcp` directly under **Customize → Connectors → Add custom connector**, then connect.
+For visual cards, provide your **logo, brand colors and organization/branch name**. The skill asks for missing details and reuses what you already provided. A reference card supplies layout inspiration, not permission to copy its customer branding. Image rendering depends on the host's tools; this package does not bundle an image renderer.
 
-## Claude Code
+## Install
+
+Install the five skills and production MCP connection from the public Sadaa marketplace.
+
+### Claude Code
+
+1. Add the marketplace:
 
 ```text
-/plugin marketplace add sadaacx/rihla-mcp
-/plugin install rihla@sadaacx
+/plugin marketplace add sadaaCX/rihla-mcp
 ```
 
-Use `/mcp` to authenticate Rihla. Reload plugins or restart Claude Code if requested.
+2. In a separate prompt, install Rihla:
 
-## Codex
+```text
+/plugin install rihla-plugin@sadaacx
+```
+
+3. Run `/mcp` and sign in to Rihla. Reload plugins or restart if prompted.
+
+Try `/rihla-plugin:cx-card-analysis` with an attached report and your brand assets. Claude downloads the plugin automatically; no terminal commands or manual repository clone are needed.
+
+### Codex
 
 ```bash
-codex plugin marketplace add https://github.com/sadaacx/rihla-mcp.git
-codex plugin add rihla@sadaacx
+codex plugin marketplace add https://github.com/sadaaCX/rihla-mcp.git
+codex plugin add rihla-plugin@sadaacx
 ```
 
-Complete OAuth in the app. For CLI authentication, use `codex mcp list` to find the installed server name, then run `codex mcp login <server-name> --scopes rihla`. Start a new task to load the tools.
+Complete OAuth in the app. For CLI authentication, run `codex mcp list` to find the registered server name, then `codex mcp login <server-name> --scopes rihla`. Start a new task to load the installed skills and tools.
 
-## Authentication and branding
+The marketplace name is `sadaacx`; the package name is `rihla-plugin`; its MCP server key remains `rihla`. An already-registered marketplace may need its source/ref updated through the host's marketplace management to use the default branch before installing.
 
-Each person signs in independently. No credentials or tokens are included. The logo is bundled locally and configured for Codex; Claude controls its own icon display.
+## Claude Desktop, Cowork and ChatGPT
 
-## Maintainers
-
-The Claude catalog is `.claude-plugin/marketplace.json`; the Codex catalog is `.agents/plugins/marketplace.json`. The shared plugin lives in `plugins/rihla/`.
-
-Update both plugin manifest versions together when publishing changes. Change the endpoint in `plugins/rihla/.mcp.json`. Never commit credentials, tokens, or personal configuration.
+See the [MCP connection guide](docs/mcp-guide.md) for direct-connector setup, the difference between a connector and the skill bundle, and public-directory limitations.

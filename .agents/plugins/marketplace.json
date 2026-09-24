@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "rihla",
+      "name": "rihla-plugin",
       "source": {
         "source": "local",
-        "path": "./plugins/rihla"
+        "path": "./plugins/rihla-plugin"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -1,11 +1,15 @@
 {
   "name": "sadaacx",
   "description": "Sadaa's Rihla MCP integration for Claude.",
-  "owner": {"name": "Sadaa"},
-  "plugins": [{
-    "name": "rihla",
-    "description": "Connect securely to Rihla through MCP.",
-    "source": "./plugins/rihla",
-    "category": "productivity"
-  }]
+  "owner": {
+    "name": "Sadaa"
+  },
+  "plugins": [
+    {
+      "name": "rihla-plugin",
+      "description": "CX skills and a secure production Rihla MCP connection.",
+      "source": "./plugins/rihla-plugin",
+      "category": "productivity"
+    }
+  ]
 }
