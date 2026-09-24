@@ -16,7 +16,7 @@ Enter the complete HTTPS URL including `/mcp`. Sign in to your Rihla account and
 
 In Claude, open **Customize → Connectors → Add custom connector**, enter the production URL, then connect and finish sign-in. Organization owners may need to add or enable the connector first. UI labels and availability depend on the host version and workspace policy.
 
-A direct connector adds Rihla tools, not the five skill files. To use the full bundle, install `rihla-plugin` from this repository's marketplace as described in the [README](../README.md). On Claude Desktop/Cowork, **Customize → Plugins → Add marketplace → Add from a repository** is the marketplace route. While this release is only on its feature branch, ensure the selected source includes that branch; a bare repository URL generally selects the default branch. If the UI cannot select a branch, use the branch checkout/Claude Code instructions or the direct connector for tool-only access.
+A direct connector adds Rihla tools, not the five skill files. To use the full bundle, install `rihla-plugin` from this repository's marketplace as described in the [README](../README.md). On Claude Desktop/Cowork, **Customize → Plugins → Add marketplace → Add from a repository** is the marketplace route. While this release is only on its feature branch, ensure the selected source includes that branch; a bare repository URL generally selects the default branch. If the UI cannot select a branch, use the direct branch-URL commands for Claude Code or the direct connector for tool-only access.
 
 ## ChatGPT
 
@@ -37,6 +37,8 @@ Analysis is read-only. Requested survey and journey edits are draft operations; 
 - **Duplicate tools or development data:** check for old `rihla` or local `sadaa-cx` installations and verify the connection points to `mcp.sadaa.com`.
 - **No image output:** check whether the host provides image/chart rendering. The skill should explain the limitation rather than claim a text report is a rendered card.
 - **Draft conflict:** read the explanation and resolve the competing edit; the skills must not silently overwrite it.
+
+Git repository URLs can select a branch with `#branch-name`; Claude handles downloading the repository. A manual clone is not required. See [Claude installation instructions](https://code.claude.com/docs/en/discover-plugins#add-from-other-git-hosts).
 
 ## References
 
